@@ -4,20 +4,19 @@ namespace Framework\Route;
 
 class RouteDao{
     private $url;
-    private $methods;
+    private $resource;
 
-    public function __construct(string $url,array $methods){
+    public function __construct(string $url,string $resource){
         $this->url = $url;
-        $this->method = $methods;
+        $this->resource = $resource;
     }
 
     public function getUrl(): string{
         return $this->url;
     }
 
-    public function getMethods(): array{
-        return $this->methods;
+    public function getResource(): string{
+        return $this->resource;
     }
-
 
 }
